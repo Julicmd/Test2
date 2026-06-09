@@ -20,13 +20,13 @@ public class SreeningController : ControllerBase
     [HttpGet("{id}:int")]
     public async Task<ActionResult> GetScreening(int id)
     {
-        var screening = await _context.Screenings.Where(sc => sc.ScreeningId == id)
+        var screening =  _context.Screenings.Where(sc => sc.ScreeningId == id)
             .Select(s => new ScreeningDto
             {
                 scid = s.ScreeningId,
                 screeningDate = s.ScreeningDate,
                 ticketPrice = s.TicketPrice,
-                availableSeats = s.AvailableSeats!,
+                
 
 
 
