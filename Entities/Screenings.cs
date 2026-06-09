@@ -10,7 +10,7 @@ public class Screenings
 
     public Halls Hall { get; set; } = null!;
     
-    public int? AvailableSeats { get; set; }
+    public int AvailableSeats { get; set; }
     
     public ICollection<Tickets> Tickets { get; set; } = new List<Tickets>();
     
