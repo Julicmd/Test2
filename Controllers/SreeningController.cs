@@ -26,11 +26,6 @@ public class SreeningController : ControllerBase
                 scid = s.ScreeningId,
                 screeningDate = s.ScreeningDate,
                 ticketPrice = s.TicketPrice,
-                
-
-
-
-
             });
 
 
