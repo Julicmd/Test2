@@ -7,6 +7,8 @@ public class Screenings
     public int MovieId { get; set; }
     public DateTime ScreeningDate { get; set; }
     public decimal TicketPrice { get; set; }
+
+    public Halls Hall { get; set; } = null!;
     
     public int? AvailableSeats { get; set; }
     
