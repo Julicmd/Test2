@@ -25,6 +25,16 @@ public class AppDbContext : DbContext
         modelBuilder.Entity<Movies>().HasKey(sc => sc.MovieId);
         modelBuilder.Entity<Tickets>().HasKey(t => new { t.ScreeningId, t.CustomerId });
         modelBuilder.Entity<Customers>().HasKey(c => c.CustomerId);
+        
+        modelBuilder.Entity<Screenings>()
+            .HasOne(s => s.Hall)
+            .WithMany(h => h.Screenings)
+            .HasForeignKey(s => s.HallId);
+
+        modelBuilder.Entity<Screenings>()
+            .HasOne(s => s.Movie)
+            .WithMany(m => m.Screenings)
+            .HasForeignKey(s => s.MovieId);
 
     }
     
