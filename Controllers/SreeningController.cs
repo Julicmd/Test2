@@ -53,7 +53,7 @@ public class SreeningController : ControllerBase
                 Capacity = s.Hall.Capacity,
                 Type = s.Hall.Type,
             },
-            Tickects = s.Tickets.Select(t=> new TicketResponseDto
+            Tickets = s.Tickets.Select(t=> new TicketResponseDto
             {
                 SeatNumber = t.SeatNumber,
                 PurchasedAt = t.PurchasedAt,

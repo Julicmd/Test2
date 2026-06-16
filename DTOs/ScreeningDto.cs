@@ -11,7 +11,7 @@ public class ScreeningDto
     public DateTime ScreenDate { get; set; }
     public decimal TicketPrice { get; set; }
     public int? AvailableSeats { get; set; }
-    public List<TicketResponseDto> Tickects { get; set; } // ir jeigu yra [] tada bus collection ir dar jeigu toliau {} dar tokie tada bus atskiras dto 
+    public List<TicketResponseDto> Tickets { get; set; } // ir jeigu yra [] tada bus collection ir dar jeigu toliau {} dar tokie tada bus atskiras dto 
     
     
     public class MovieDto // va toks va 
